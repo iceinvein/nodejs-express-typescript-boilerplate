@@ -2,6 +2,9 @@ import { createHttpTerminator } from 'http-terminator';
 import app from './app';
 import logger from './logger';
 import { PORT } from './config';
+import connectDatabase from './database';
+
+connectDatabase();
 
 const server = app.listen(PORT, () => {
   logger.info(`Server running at http://localhost:${PORT} in ${app.get('env')} mode`);

@@ -36,7 +36,7 @@ const transports = [
     filename: 'logs/error.log',
     level: 'error',
   }),
-  new winston.transports.File({ filename: 'logs/all.log' }),
+  new winston.transports.File({ filename: 'logs/run.log' }),
 ];
 
 const Logger = winston.createLogger({
